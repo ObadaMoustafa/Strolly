@@ -1,6 +1,6 @@
 import React, { createContext, useState } from "react";
 import PropTypes from "prop-types";
-import { AMSTERDAM_LAT, AMSTERDAM_LON } from "../data.js";
+import { AMSTERDAM_LAT, AMSTERDAM_LON } from "../pages/FindStroller/data.js";
 
 export const MapContext = createContext();
 

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Input from "../../components/Input";
 import familyPic from "../../images/black-family-square-pic.jpg";
 import "../../styles/Login.css";
-import TEST_ID from "./Login.testid";
 import TertiaryButton from "../../components/buttons/TertiaryButton";
 import useFetch from "../../hooks/useFetch";
 import Spinner from "../../components/Spinner";
@@ -79,7 +78,6 @@ const Login = () => {
                 placeholder="&#128231; Email *"
                 required
                 onChange={(value) => setEmail(value.toLowerCase())}
-                data-testid={TEST_ID.emailInput}
                 data-cy="input-email"
               />
               <Input
@@ -89,7 +87,6 @@ const Login = () => {
                 value={password}
                 required
                 onChange={(value) => setPassword(value)}
-                data-testid={TEST_ID.passwordInput}
                 data-cy="input-password"
               />
               <TertiaryButton
@@ -97,7 +94,6 @@ const Login = () => {
                 type="submit"
                 text="Login"
                 width="80%"
-                data-testid={TEST_ID.submitButton}
                 testID="input-submit"
               />
             </form>

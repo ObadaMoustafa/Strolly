@@ -1,4 +1,4 @@
-import { logInfo, logWarning, logError } from "../logging.js";
+import { logInfo, logWarning, logError } from "./logging.js";
 
 describe("logging", () => {
   it("logInfo should log to the console.log", () => {

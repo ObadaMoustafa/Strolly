@@ -4,7 +4,6 @@ import Input from "../../components/Input";
 import Spinner from "../../components/Spinner";
 import Error from "../../components/Error";
 import useFetch from "../../hooks/useFetch";
-import TEST_ID from "./SignUp.testid";
 import TertiaryButton from "../../components/buttons/TertiaryButton";
 import { useContext } from "react";
 import { userContext } from "../../context/userContext";
@@ -70,7 +69,7 @@ const CreateUser = () => {
   else if (isLoading) statusComponent = <Spinner className="spinner" />;
 
   return (
-    <div data-testid={TEST_ID.container} className="sign-up-input-container">
+    <div className="sign-up-input-container">
       <div className="sign-up-input-headers" data-cy="signup-header">
         <h2>Welcome to Strolly!</h2>
         <h4>Ready to start?</h4>
@@ -90,7 +89,6 @@ const CreateUser = () => {
               value={firstName}
               placeholder="John"
               onChange={(value) => setFirstName(value)}
-              data-testid={TEST_ID.firstNameInput}
               required
               data-cy="signup-first-name"
             />
@@ -109,7 +107,6 @@ const CreateUser = () => {
               placeholder="Doe"
               required
               onChange={(value) => setLastName(value)}
-              data-testid={TEST_ID.lastNameInput}
               data-cy="signup-last-name"
               style={{ height: "40px" }}
             />
@@ -128,7 +125,6 @@ const CreateUser = () => {
               placeholder="&#x1F4E7; example@email.com"
               required
               onChange={(value) => setEmail(value.toLowerCase())}
-              data-testid={TEST_ID.emailInput}
               type="email"
               data-cy="signup-email"
             />
@@ -147,7 +143,6 @@ const CreateUser = () => {
               placeholder="&#x260E;"
               required
               onChange={(value) => setPhoneNumber(value)}
-              data-testid={TEST_ID.phoneNumberInput}
               type="tel"
               maxLength="10"
               minLength="10"
@@ -169,7 +164,6 @@ const CreateUser = () => {
               value={password}
               required
               onChange={(value) => setPassword(value)}
-              data-testid={TEST_ID.passwordInput}
               data-cy="signup-password"
             />
           </label>
@@ -188,7 +182,6 @@ const CreateUser = () => {
               value={confirmPassword}
               required
               onChange={(value) => setConfirmPassword(value)}
-              data-testid={TEST_ID.confirmPasswordInput}
               data-cy="signup-confirm-password"
             />
           </label>

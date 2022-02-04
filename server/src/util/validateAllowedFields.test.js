@@ -1,4 +1,4 @@
-import validateAllowedFields from "../validateAllowedFields.js";
+import validateAllowedFields from "./validateAllowedFields.js";
 
 describe("validateAllowedFields", () => {
   it("Returns an empty string if all fields are allowed", () => {

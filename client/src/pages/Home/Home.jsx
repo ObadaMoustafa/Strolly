@@ -6,11 +6,9 @@ import VideoHeader from "./VideoHeader";
 
 import StartButton from "./StartButton";
 
-import TEST_ID from "./Home.testid";
-
 const Home = () => {
   return (
-    <div data-testid={TEST_ID.container}>
+    <div>
       <VideoHeader />
       <div className="first-h1">
         <h1>How It Works</h1>

@@ -2,14 +2,13 @@ import React from "react";
 import { useContext, useState, useEffect } from "react";
 import { MapContext } from "../../context/mapContext";
 import useFetch from "../../hooks/useFetch";
-import TEST_ID from "./Map.testid";
 import Spinner from "../../components/Spinner";
 import Error from "../../components/Error";
 import {
   MAPBOX_CITY_COORDINATES_BASE_URL,
   MAPBOX_CITY_COORDINATES_URL_PARAMS,
   ZOOM_RATE,
-} from "../../data";
+} from "./data";
 
 const CityOptions = () => {
   const { setViewport } = useContext(MapContext);
@@ -58,7 +57,6 @@ const CityOptions = () => {
     statusComponent = (
       <div className="select-city-name-container">
         <select
-          data-testid={TEST_ID.userList}
           data-loaded={cityNames != null}
           className="select-city-name"
           data-cy="city-options"

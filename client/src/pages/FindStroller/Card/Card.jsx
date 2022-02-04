@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-import TEST_ID from "../FindStroller.testid";
 import propTypes from "prop-types";
 import useFetch from "../../../hooks/useFetch";
 import { userContext } from "../../../context/userContext";
@@ -75,7 +74,6 @@ const Card = ({ type }) => {
                 <div className="findStroller-links button-description">
                   <Link
                     to={`/strollerinfo/${type.strollerTypeId}/${type.strollers[0]?._id}/${type.strollers[0].location.centerName}/${type.strollers[0].location._id}`}
-                    data-testid={TEST_ID.strollerInfoLink}
                     style={{
                       textDecoration: "none",
                     }}

@@ -3,8 +3,6 @@ import { Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
 import StrollerInfo from "./pages/stroller_info/StrollerInfo";
-import CreateUser from "./pages/User/CreateUser";
-import UserList from "./pages/User/UserList";
 import FindStroller from "./pages/FindStroller/FindStroller";
 import Contact from "./pages/Contact/Contact";
 import About from "./pages/About/About";
@@ -31,8 +29,6 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
 
-            <Route path="/user" element={<UserList />} />
-            <Route path="/user/create" element={<CreateUser />} />
             <Route path="/find_strollers" element={<FindStroller />} />
             <Route
               path="/strollerinfo/:strollerTypeId/"

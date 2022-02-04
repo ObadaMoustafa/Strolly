@@ -5,7 +5,7 @@ import useFetch from "../../hooks/useFetch";
 import Logo from "../../images/icon-orange.png";
 import PopUpInfo from "./Popup/PopupInfo";
 import "../../styles/FindStroller.css";
-import { MAPBOX_STYLES } from "../../data";
+import { MAPBOX_STYLES } from "./data";
 
 const Map = () => {
   const { viewport, setViewport, handleClick } = useContext(MapContext);

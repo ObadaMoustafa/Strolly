@@ -1,4 +1,4 @@
-import validationErrorMessage from "../validationErrorMessage.js";
+import validationErrorMessage from "./validationErrorMessage.js";
 
 describe("validationErrorMessage", () => {
   it("Adds every error message in the given list to the message", () => {

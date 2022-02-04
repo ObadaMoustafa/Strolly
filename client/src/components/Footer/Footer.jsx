@@ -2,7 +2,6 @@ import React from "react";
 import "../../styles/Footer.css";
 import { Link } from "react-router-dom";
 import { Facebook, Twitter, Instagram } from "react-feather";
-import TEST_ID from "./Footer.testid";
 
 const Footer = () => {
   return (
@@ -19,7 +18,7 @@ const Footer = () => {
           </div>
 
           <div data-cy="footer-info" className="footer-column">
-            <Link to="/about" data-testid={TEST_ID.linkToAbout}>
+            <Link to="/about">
               <h4>About Us</h4>
             </Link>
             <ul className="footer-ul">

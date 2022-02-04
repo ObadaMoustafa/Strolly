@@ -1,7 +1,6 @@
 import React, { useEffect, useContext, useState } from "react";
 import useFetch from "../../../hooks/useFetch";
 import Card from "./Card";
-import TEST_ID from "../FindStroller.testid";
 import { MapContext } from "../../../context/mapContext";
 import Error from "../../../components/Error";
 import Spinner from "../../../components/Spinner";
@@ -26,7 +25,7 @@ const CardList = () => {
     content = <Error errorTxt={error} />;
   } else if (isLoading) {
     content = (
-      <div data-testid={TEST_ID.loadingContainer}>
+      <div>
         <Spinner />
       </div>
     );
@@ -35,7 +34,6 @@ const CardList = () => {
       <>
         <ul
           className="findStroller-result-list"
-          data-testid={TEST_ID.cardList}
           data-loaded={strollers != null}
           data-cy="card-list"
         >
@@ -50,7 +48,6 @@ const CardList = () => {
   }
   return (
     <div
-      data-testid={TEST_ID.cardListContainer}
       style={{
         display: "flex",
         justifyContent: "center",
