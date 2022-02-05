@@ -1,7 +1,7 @@
 import React from "react";
 import "../../styles/Footer.css";
 import { Link } from "react-router-dom";
-import { Facebook, Twitter, Instagram } from "react-feather";
+import { GitHub, Linkedin } from "react-feather";
 
 const Footer = () => {
   return (
@@ -48,30 +48,21 @@ const Footer = () => {
         <div className="social-media">
           <a
             className="social-icon"
-            href="https://www.facebook.com/profile.php?id=100075694695958"
+            href="https://www.linkedin.com/in/obada-elsharbatly/"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Facebook"
+            aria-label="LinkedIn"
           >
-            <Facebook />
+            <Linkedin />
           </a>
           <a
             className="social-icon"
-            href="https://twitter.com/HyfStrolly"
+            href="https://github.com/ObadaElSharbatly"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
+            aria-label="GitHub"
           >
-            <Twitter />
-          </a>
-          <a
-            className="social-icon"
-            href="https://www.instagram.com/strolly.hyf/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram"
-          >
-            <Instagram />
+            <GitHub />
           </a>
         </div>
       </div>

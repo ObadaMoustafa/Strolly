@@ -10,9 +10,7 @@ import ShowSpinnerOrErrors from "../../components/ShowSpinnerOrErrors";
 //* recreating the `Stripe` object on every render.
 //! change this key to the live key in production environment
 
-const stripePromise = loadStripe(
-  "pk_test_51K9D90KxEN1n8FpgLH4pkoJoN08Hs2OjHJiJyuxH7zt0sW4cHy9ljZvT8YSUSfYJWLppCDkXA2EkVVYlA8xTOUWm00zE6qPY0p"
-);
+const stripePromise = loadStripe(process.env.STRIPE_PUBLISHABLE_KEY);
 
 function Payments() {
   const [clientKey, setClientKey] = useState(null);

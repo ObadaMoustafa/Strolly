@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import Users from "../models/Users.js";
 import { logError } from "../util/logging.js";
 import ErrorResponse from "../util/errorResponse.js";
@@ -7,10 +9,7 @@ import StrollyCenters from "../models/StrollyCenters.js";
 import Stripe from "stripe";
 
 //! change this key to the live key in production environment
-const stripe = new Stripe(
-  // eslint-disable-next-line prettier/prettier
-  "sk_test_51K9D90KxEN1n8FpgJHQIvSvrtTt1FISz1c1iLWnHWK0yArk8ZTYU1yxJfor7G0Sp4HvGEhOD8Q6Qw1REBZm4N7zb00bePXgods"
-);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 // this file will have functions to handle orders
 export const lockStroller = async (req, res, next) => {

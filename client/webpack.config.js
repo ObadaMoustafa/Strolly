@@ -46,6 +46,7 @@ module.exports = {
       BASE_SERVER_URL: "",
       REACT_APP_MAP_TOKEN: "",
       BASE_CLIENT_URL: "",
+      STRIPE_PUBLISHABLE_KEY: "",
     }),
   ],
   // To tell the dev server that everything should go back to index.html

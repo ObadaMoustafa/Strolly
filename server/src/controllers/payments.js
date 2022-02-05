@@ -1,12 +1,12 @@
+import dotenv from "dotenv";
+dotenv.config();
 // Set your secret key. Remember to switch to your live secret key in production.
 // See your keys here: https://dashboard.stripe.com/apikeys
 import { logError } from "../util/logging.js";
 import Stripe from "stripe";
 
 //! change this key to the live key in production environment
-const stripe = new Stripe(
-  "sk_test_51K9D90KxEN1n8FpgJHQIvSvrtTt1FISz1c1iLWnHWK0yArk8ZTYU1yxJfor7G0Sp4HvGEhOD8Q6Qw1REBZm4N7zb00bePXgods"
-);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 //get the customer Object by customer id .. I think we don't need it till now
 export const getCustomer = async (req, res) => {

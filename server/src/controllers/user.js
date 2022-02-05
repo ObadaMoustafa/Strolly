@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config();
 import Users, { validateUser } from "../models/Users.js";
 import { logError } from "../util/logging.js";
 import validationErrorMessage from "../util/validationErrorMessage.js";
@@ -5,9 +7,7 @@ import Stripe from "stripe";
 import ErrorResponse from "../util/errorResponse.js";
 
 //! change this key to the live key in production environment
-const stripe = new Stripe(
-  "sk_test_51K9D90KxEN1n8FpgJHQIvSvrtTt1FISz1c1iLWnHWK0yArk8ZTYU1yxJfor7G0Sp4HvGEhOD8Q6Qw1REBZm4N7zb00bePXgods"
-);
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 // the function getUsers is used to get all users from the database and return them to the client in json format (application/json).
 
 export const getUsers = async (req, res, next) => {
