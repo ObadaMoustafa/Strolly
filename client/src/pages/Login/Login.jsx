@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react";
-import Input from "../../components/Input";
 import familyPic from "../../images/black-family-square-pic.jpg";
 import "../../styles/Login.css";
 import TertiaryButton from "../../components/buttons/TertiaryButton";
@@ -72,21 +71,21 @@ const Login = () => {
               Welcome to Strolly!
             </h1>
             <form onSubmit={handleSubmit} className="login-form">
-              <Input
+              <input
                 name="email"
                 value={email}
                 placeholder="&#128231; Email *"
                 required
-                onChange={(value) => setEmail(value.toLowerCase())}
+                onChange={(e) => setEmail(e.target.value.toLowerCase())}
                 data-cy="input-email"
               />
-              <Input
+              <input
                 name="password"
                 type="password"
                 placeholder="&#x1F512; Password *"
                 value={password}
                 required
-                onChange={(value) => setPassword(value)}
+                onChange={(e) => setPassword(e.target.value)}
                 data-cy="input-password"
               />
               <TertiaryButton

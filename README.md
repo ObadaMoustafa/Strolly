@@ -17,11 +17,11 @@ This is the final project for the HackYourFuture curriculum we did as a class us
 
 Strolly is a App created to help parents or caretakers to rent a stroller in the Amsterdam, Denventer, Groningen and Den Haag area.
 
-[Click here for the Demo version](https://hyf-c33-final-project.herokuapp.com/)
+[Click here for the Demo version](https://strolly-hyf-graduation.herokuapp.com/)
 
-## 1. Setup
+## 1. Setup Locally
 
-First, to setup all the directories run the following in the main directory:
+First, clone the repo and run these commands _**in main directory**_:
 
 `npm install`
 
@@ -31,9 +31,10 @@ The first command will install `cypress` and some small libraries needed for run
 
 In the `client` and `server` directory there are two `.env.example` files. Create a copy and rename that to `.env`. Then follow the instructions in those files to fill in the right values.
 
-To run the app in dev mode you can run the following command in the main directory:
+after filling the right values specially the mongoDB connection string in server side you should run `npm run seed:db` then your database has been seeded with initial data and ready to use.
 
-`npm run dev`
+To run the app in dev mode you can run `npm run dev`
+Then the app gonna work in http://localhost:8080/
 
 ## 2. Code structure
 
@@ -41,26 +42,20 @@ To run the app in dev mode you can run the following command in the main directo
 client
 ├── public
 └── src
-|   └── __tests__
-|   └── __testUtils__
 |   └── components
 |   └── hooks
 |   └── pages
-|       └── __tests__
-|       └── components
 |   └── util
 |   index.jsx
 cypress
 |   └── fixtures
 |   └── integration
-|   └── plugins
-|   └── support
 server
 └── src
-    └── __tests__
     └── __testUtils__
     └── controllers
     └── db
+    └── ini_DB
     └── models
     └── routes
     └── util
@@ -75,7 +70,6 @@ server
 - `components` || all of our shared components that are used over multiple pages
 - `hooks` || all of our custom hooks
 - `pages` || the page components of our app, any routing will go between these components
-- `pages/components` || components used specifically on those pages
 - `util` || any utility functions that can be used anywhere on the client side
 - `index.jsx` || the start point of the client
 
@@ -83,15 +77,13 @@ server
 
 - `fixtures` || any data/files that `cypress` needs can be placed here
 - `integration` || all of our tests are in here, separated in folders based on the pages in our app
-- `plugins` || any plugins for our `cypress` configuration can be placed here
-- `support` || custom commands and other support files for `cypress` can be placed here
 
 ### 2.3 Server structure
 
-- `__tests__` || any `jest` tests for the api endpoints as that is our testing strategy for the backend
 - `__testUtils__` || any code that is only being used in the tests is put in the `__testUtils__` folder to separate that away from the rest of the code
 - `controllers` || all of our controller functions that interact with the database
 - `db` || all of our configuration for the database
+- `ini_DB` || all of our necessary initial data to be ready to seed in database and can be modified any time
 - `models` || all of our `mongoose` models will be placed here
 - `routes` || code to match up the API with our controllers
 - `util` || any utility functions that can be used anywhere on the server side
@@ -105,7 +97,6 @@ The base stack of the app is a MERN stack (Mongoose, Express, React, Node). Next
 
 - `dotenv` || To load the .env variables into the process environment. See [docs](https://www.npmjs.com/package/dotenv)
 - `webpack` / `html-webpack-plugin` || To bundle our React app and create a static app to host. See [docs](https://webpack.js.org/)
-- `husky` || To run our tests and linter before committing. See [docs](https://typicode.github.io/husky/#/)
 - `eslint` || To check our code. We have different configurations for frontend and backend. You can check out the configuration in the `.eslintrc.(c)js` files in the respective `client` and `server` folders. See [docs](https://eslint.org/)
 - `prettier` || To automatically format our code. See [docs](https://prettier.io/)
 - `concurrently` || To run commands in parallel. See [docs](https://github.com/open-cli-tools/concurrently#readme)

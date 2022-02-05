@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Input from "../../components/Input";
 import Spinner from "../../components/Spinner";
 import Error from "../../components/Error";
 import useFetch from "../../hooks/useFetch";
@@ -84,11 +83,11 @@ const CreateUser = () => {
                 *
               </span>
             </div>
-            <Input
+            <input
               name="firstName"
               value={firstName}
               placeholder="John"
-              onChange={(value) => setFirstName(value)}
+              onChange={(e) => setFirstName(e.target.value)}
               required
               data-cy="signup-first-name"
             />
@@ -101,12 +100,12 @@ const CreateUser = () => {
                 *
               </span>
             </div>
-            <Input
+            <input
               name="lastName"
               value={lastName}
               placeholder="Doe"
               required
-              onChange={(value) => setLastName(value)}
+              onChange={(e) => setLastName(e.target.value)}
               data-cy="signup-last-name"
               style={{ height: "40px" }}
             />
@@ -119,12 +118,12 @@ const CreateUser = () => {
                 *
               </span>
             </div>
-            <Input
+            <input
               name="email"
               value={email}
               placeholder="&#x1F4E7; example@email.com"
               required
-              onChange={(value) => setEmail(value.toLowerCase())}
+              onChange={(e) => setEmail(e.target.value.toLowerCase())}
               type="email"
               data-cy="signup-email"
             />
@@ -137,12 +136,12 @@ const CreateUser = () => {
                 *
               </span>
             </div>
-            <Input
+            <input
               name="phoneNumber"
               value={phoneNumber}
               placeholder="&#x260E;"
               required
-              onChange={(value) => setPhoneNumber(value)}
+              onChange={(e) => setPhoneNumber(e.target.value)}
               type="tel"
               maxLength="10"
               minLength="10"
@@ -157,13 +156,13 @@ const CreateUser = () => {
                 *
               </span>
             </div>
-            <Input
+            <input
               name="password"
               type="password"
               placeholder="&#x1F512;"
               value={password}
               required
-              onChange={(value) => setPassword(value)}
+              onChange={(e) => setPassword(e.target.value)}
               data-cy="signup-password"
             />
           </label>
@@ -175,13 +174,13 @@ const CreateUser = () => {
                 *
               </span>
             </div>
-            <Input
+            <input
               name="confirm-password"
               type="password"
               placeholder="&#x1F512;"
               value={confirmPassword}
               required
-              onChange={(value) => setConfirmPassword(value)}
+              onChange={(e) => setConfirmPassword(e.target.value)}
               data-cy="signup-confirm-password"
             />
           </label>
