@@ -17,9 +17,9 @@ function Payments() {
   const { userId } = useParams();
   const { isLoading, error, performFetch, cancelFetch } = useFetch(
     `/payments/createPaymentIntent/${userId}`,
-    (response) => {
+    response => {
       setClientKey(response.client_secret);
-    }
+    },
   );
   useEffect(() => {
     performFetch();
@@ -51,6 +51,17 @@ function Payments() {
               <h2 style={{ textAlign: "center" }}>
                 Please fill the payment info to activate your account
               </h2>
+              <h4 style={{ textAlign: "center" }}>
+                <em>
+                  Note: this website is not a real payment website <br />
+                  You can use these fake info to activate your account{" "}
+                  <span style={{ color: "black" }}>
+                    5555 5555 5555 4444
+                  </span>{" "}
+                  <br />
+                  Then you can put any future date and any CVC number
+                </em>
+              </h4>
               <div className="payment-form-container">
                 <Elements stripe={stripePromise} options={options}>
                   <CheckoutForm userId={userId} />
