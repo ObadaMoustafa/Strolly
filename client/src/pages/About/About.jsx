@@ -43,7 +43,7 @@ const About = () => {
             <div className="student">
               <a
                 className="student"
-                href="https://github.com/ObadaElSharbatly"
+                href="https://github.com/ObadaMoustafa"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Obada Github"
