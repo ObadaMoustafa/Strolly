@@ -1,18 +1,8 @@
 import React from "react";
-import Video from "../../media/strolly-video.mp4";
+import video from "../../media/strolly-video-GIF.gif";
 
 const VideoHeader = () => {
-  return (
-    <video
-      src={Video}
-      className="video"
-      autoPlay={true}
-      loop
-      muted
-      width="100%"
-      type="video/mp4"
-    />
-  );
+  return <img src={video} alt="intro gif" width={"100%"} />;
 };
 
 export default VideoHeader;

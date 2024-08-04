@@ -17,9 +17,9 @@ function Payments() {
   const { userId } = useParams();
   const { isLoading, error, performFetch, cancelFetch } = useFetch(
     `/payments/createPaymentIntent/${userId}`,
-    response => {
+    (response) => {
       setClientKey(response.client_secret);
-    },
+    }
   );
   useEffect(() => {
     performFetch();

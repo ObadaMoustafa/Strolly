@@ -30,8 +30,8 @@ function PaymentSuccess() {
     return cancelFetch;
   }, []);
 
+  //! don't remove page-container or page-content-container classes unless you know what you're doing
   return (
-    //! don't remove page-container or page-content-container classes unless you know what you're doing
     <div className="page-container">
       <div className="page-content-container">
         {/* You can put all your element inside this container */}

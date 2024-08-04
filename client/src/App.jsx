@@ -42,38 +42,24 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
-            <Route exact path="/checkout/:userId" element={<PrivateRoute />}>
-              <Route exact path="/checkout/:userId" element={<Payments />} />
+            <Route path="/checkout/:userId" element={<PrivateRoute />}>
+              <Route path="/checkout/:userId" element={<Payments />} />
             </Route>
 
-            <Route
-              exact
-              path="/checkout/success/:userId"
-              element={<PrivateRoute />}
-            >
+            <Route path="/checkout/success/:userId" element={<PrivateRoute />}>
               <Route
                 path="/checkout/success/:userId"
                 element={<PaymentSuccess />}
               />
             </Route>
-            <Route
-              exact
-              path="/reservation/:userId/"
-              element={<PrivateRoute />}
-            >
-              <Route
-                exact
-                path="/reservation/:userId/"
-                element={<Reservation />}
-              />
+            <Route path="/reservation/:userId/" element={<PrivateRoute />}>
+              <Route path="/reservation/:userId/" element={<Reservation />} />
             </Route>
             <Route
-              exact
               path="/reservation/success/recap/:orderId"
               element={<PrivateRoute />}
             >
               <Route
-                exact
                 path="/reservation/success/recap/:orderId"
                 element={<RentingRecap />}
               />
