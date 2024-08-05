@@ -41,14 +41,14 @@ const Footer = () => {
       <div data-cy="footer-info" className="footer-row-bottom">
         <div className="copyright">
           <p className="col-sm">
-            &copy;{new Date().getFullYear()} Strolly | Made with{" "}
-            <i className="bi bi-suit-heart"></i> by HYF Class 33 |
+            &copy;2021 Strolly | Made with <i className="bi bi-suit-heart"></i>{" "}
+            by HYF Class 33 |
           </p>
         </div>
         <div className="social-media">
           <a
             className="social-icon"
-            href="https://www.linkedin.com/in/obada-elsharbatly/"
+            href="https://www.linkedin.com/in/obada-moustafa/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -57,7 +57,7 @@ const Footer = () => {
           </a>
           <a
             className="social-icon"
-            href="https://github.com/ObadaElSharbatly"
+            href="https://github.com/ObadaMoustafa"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"
